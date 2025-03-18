@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de Saúde</title>
+    <link rel="stylesheet" type="text/css" href="formularioSaude.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Questionário de Saúde</h1>
+        <form id="healthForm" onsubmit="submitForm(event)">
+            <!-- Página 1 -->
+            <div class="form-page" id="page1">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="age">Idade</label>
+                        <input type="number" id="age" name="age" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gênero</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Selecione</option>
+                            <option value="male">Masculino</option>
+                            <option value="female">Feminino</option>
+                            <option value="other">Outro</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página 2 -->
+            <div class="form-page hidden" id="page2">
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="height">Altura (cm)</label>
+                        <input type="number" id="height" name="height" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Peso (kg)</label>
+                        <input type="number" id="weight" name="weight" min="0" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Quais sintomas você costuma sentir no dia a dia</label>
+                    <div class="symptoms-checkbox">
+                        <label><input type="checkbox" name="symptoms" value="dor_cabeca" >Dor de cabeça</label><br>
+                        <label><input type="checkbox" name="symptoms" value="febre">Febre</label><br>
+                        <label><input type="checkbox" name="symptoms" value="dor_corpo">Dor no corpo</label><br>
+                        <label><input type="checkbox" name="symptoms" value="tosse">Tosse</label><br>
+                        <label><input type="checkbox" name="symptoms" value="cansaco">Cansaço</label><br>
+                        <label><input type="checkbox" name="symptoms" value="congestao_nasal">Congestão nasal</label><br>
+                        <label><input type="checkbox" name="symptoms" value="dor_garganta">Dor de garganta</label><br>
+                        <label><input type="checkbox" name="symptoms" value="azia">Azia</label><br>
+                        <label><input type="checkbox" name="symptoms" value="nausea">Náusea</label><br>
+                        <label><input type="checkbox" name="symptoms" value="dor_estomago">Dor no estômago</label><br>
+                        <!-- Checkbox "Outro" -->
+                        <label><input type="checkbox" id="symptoms_other"
+                                onclick="toggleOtherSymptom()">Outro</label><br>
+                    </div>
+                    <textarea id="other_symptom" name="other_symptom" class="hidden"
+                        placeholder="Digite o sintoma específico aqui..."></textarea>
+                </div>
+            </div>
+
+            <!-- Página 3 -->
+            <div class="form-page hidden" id="page3">
+                <div class="form-group">
+                    <label>Você possui alguma dessas condições de saúde?</label>
+                    <div class="conditions-checkbox">
+                        <label><input type="checkbox" name="conditions" value="diabetes">Diabetes</label>
+                        <label><input type="checkbox" name="conditions" value="hipertensao">Hipertensão</label>
+                        <label><input type="checkbox" name="conditions" value="obesidade">Obesidade</label>
+                        <label><input type="checkbox" name="conditions" value="colesterol_alto">Colesterol
+                            alto</label>
+                        <label><input type="checkbox" name="conditions" value="doencas_respiratorias">Doenças
+                            respiratórias (como asma, bronquite)</label>
+                        <label><input type="checkbox" name="conditions" value="doencas_cardiacas">Doenças
+                            cardíacas</label>
+                        <label><input type="checkbox" name="conditions" value="acidente_vascular_cerebral">Acidente
+                            vascular cerebral (AVC)</label>
+                        <label><input type="checkbox" name="conditions" value="artrite_osteoartrite">Artrite/ Osteoartrite</label>
+                        <label><input type="checkbox" name="conditions" value="ansiedade">Ansiedade</label>
+                        <label><input type="checkbox" name="conditions" value="depressao">Depressão</label>
+                        <label><input type="checkbox" name="conditions" value="doencas_renais">Doenças renais</label>
+                        <!-- Checkbox "Outro" -->
+                        <label><input type="checkbox" id="conditions_other"
+                                onclick="toggleOtherCondition()">Outro</label>
+                    </div>
+                    <textarea id="other_condition" name="other_condition" class="hidden"
+                        placeholder="Digite a condição de saúde específica aqui..."></textarea>
+                </div>
+            </div>
+
+            <!-- Página 4 -->
+            <div class="form-page hidden" id="page4">
+                <div class="form-group">
+                    <label for="medications">Você está tomando algum medicamento atualmente? Se sim, liste-os.</label>
+                    <textarea id="medications" required name="medications" rows="3" placeholder="Digite aqui..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="allergies">Você possui alguma alergia a medicamentos?</label>
+                    <textarea id="allergies" required name="allergies" rows="3" placeholder="Digite aqui..."></textarea>
+                </div>
+            </div>
+
+            <!-- Botões -->
+            <div class="btn-container">
+                <button type="button" id="prevBtn" class="btn hidden" onclick="changePage(-1)">Anterior</button>
+                <button type="button" id="nextBtn" class="btn" onclick="changePage(1)">Próximo</button>
+                <button type="submit" id="submitBtn" class="btn hidden">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+   <script  src="formularioSaude.js"></script>
+</body>
+
+</html>

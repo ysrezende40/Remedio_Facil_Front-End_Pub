@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="info.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="image/logo.png" class="logoimagem" alt="Logo">
+    </a>
+
+    <!-- Pesquisa -->
+    <div class="search-bar">
+        <input type="text" id="pesquisa" placeholder="Pesquisar medicamentos..." class="search-input">
+        <div id="sugestoes" class="sugestoes"></div>
+        <button class="search-button">🔍</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="cabecalho">
+        <a href="index.html">Home</a>
+        <a href="medicina.html">Medicamentos</a>
+        <a href="contato.html">Contatos</a>
+    </nav>
+</header>
+
+<!-- Caixa de Imagem com Descrição -->
+<div class="image-description-box">
+    <div class="image-box">
+        <!-- Espaço para a imagem -->
+        <img src="image/sacolaimg.png" alt="Descrição da imagem" class="image">
+    </div>
+    <div class="description-box">
+        <!-- Espaço para a descrição -->
+        <h2>Título do Medicamento</h2>
+        <p>Detalhes sobre o medicamento serão exibidos aqui.</p>
+    </div>
+</div>
+
+<div class="Text-informa">
+    <h2>Localizamos a farmácia mais próxima de você!</h2>
+    <p>A farmácia exibida no mapa possui o medicamento selecionado em estoque. Verifique as informações de contato e o endereço abaixo para mais detalhes.</p>
+</div>
+
+<div class="loc-box">
+    <h2>Localização</h2>
+    <br>
+
+    <div id="iframe-container">
+        <!-- O iframe inicial será definido dinamicamente -->
+    </div>
+   
+</div>
+
+<!-- Rodapé -->
+<footer class="rodape">
+    <div class="cabecalho">
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+</footer>
+
+<script type="module" src="detalhes.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--google font-->
+    <!--link for css file-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--link for css file-->
+</head>
+<body>
+
+
+<!--header-->
+<header class="header">
+
+    <a href="#" class="logo">"
+        <img src="image/logo.png" class="logoimagem">
+    </a>
+
+<!--Pesquisar-->
+
+<div class="search-bar">
+    <input type="text" id="pesquisa" placeholder="Pesquisar medicamentos..." class="search-input">
+    <div id="sugestoes" class="sugestoes"></div>
+    <button id="searchBtn" class="search-button">🔍</button>
+</div>
+
+
+
+<!--Pesquisar-->
+    <!--nav bar-->
+    <nav class="cabecalho">
+        <a href="index.html">Home</a>
+        <a href="medicina.html">Medicamentos</a>
+        <a href="contato.html">Contatos</a>
+        
+        <div class="upload-wrapper">
+            <div class="upload-info" id="uploadInfo">
+                <span>Envie sua receita médica para encontrar rapidamente os remédios necessários de forma prática e segura.</span>
+                <button class="close-btn" onclick="closeInfo()">×</button>
+            </div>
+            <label class="upload-btn">
+                <img src="image/upload-icon.png" alt="Upload" class="upload-icon">
+                <span>Upload</span>
+                <input type="file" id="fileUpload" style="display: none;">
+            </label>
+        </div>
+        
+        </div>
+        
+    </nav>
+</header>
+<div id="search-results" class="search-results">
+    <!-- Resultados serão exibidos aqui -->
+</div>
+
+<!--header-->
+
+<!--main-->
+
+<section class="main">
+    <div class="left">
+        <h2>Medicamento Certo, na Hora Certa, Sem Complicação</h2>
+        <h1>Nossa plataforma oferece uma busca avançada de medicamentos, personalizada de acordo com o seu histórico de saúde. Encontre medicamentos recomendados, veja informações detalhadas com opções de entrega rápida e segura, com base na disponibilidade em tempo real.
+        </h1>
+        <a href="formularioSaude.html">
+          <button class="btn-formulario"> Vamos Começar </button>
+        </a>
+    </div>
+    <div class="right">
+        <img src="image/sacolaimg.png">
+    </div>
+</section>
+
+<!--main-->
+
+<!--imagem animada farmacia-->
+
+<a href="#" class="imagemanimada">"
+    <img src="image/imghome.png" class="animada">
+</a>
+
+<!--imagem animada farmacia-->
+
+
+<!--rodapé-->
+<footer class="rodape">
+    <div class="cabecalho">
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+</footer>
+
+<!-- Script gambiarra para o pop up -->
+<script>
+function closeInfo() {
+    const infoBox = document.querySelector('.upload-info');
+    if (infoBox) {
+        infoBox.classList.add('hidden'); // Adiciona a classe que esconde a box
+    }
+}
+// Esconde a mensagem automaticamente após 20 segundos
+window.addEventListener('load', () => {
+    const infoBox = document.querySelector('.upload-info'); // Melhor usar `querySelector` para consistência
+    infoBox.onclick =function(){
+        infoBox.classList.add('hidden'); // Adiciona a classe para ocultar a box
+    }
+    setTimeout(() => {
+        if (infoBox) {
+            infoBox.classList.add('hidden'); // Adiciona a classe para ocultar a box
+        }
+    }, 10000); // 20 segundos
+});
+</script>
+
+<script type="module" src="index.js"></script>
+
+</body>
+</html>

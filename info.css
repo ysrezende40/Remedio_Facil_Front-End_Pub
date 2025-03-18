@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --black: black;
+    --purple: purple;
+    --light-color:#666;
+  
+
+   /*A unidade rem (root em) é uma unidade de medida relativa usada principalmente em CSS,
+    para definir tamanhos de fontes e outros elementos na web. 
+    Ela se baseia no tamanho da fonte do elemento raiz da página, que geralmente é o elemento <html> */
+}
+
+.logoimagem{
+    width: 100px ;
+    right: 100px ;
+    
+}
+
+*{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+body{
+    background: #fff;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/*header*/
+
+
+
+.header .logoimagem img{
+    width: 100px ;
+    right: 100px ;
+    margin-top: 10px;
+    height: 95%;
+    width: 65%;
+    display: inline-block;
+}
+
+.header .cabecalho a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+}
+
+.header .cabecalho a:hover{
+    color: #fff;
+    background: linear-gradient(120deg, #A0E7E5 40%, #00BFA6);
+
+}
+/*header*/
+
+
+.header .lista-Medic{
+    position: absolute;
+    top: 110%;
+    right: 2rem;
+    width: 35rem;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border-radius: .5rem;
+}
+/*Pesquisar*/
+
+/* Ajuste no cabeçalho para incluir a barra de pesquisa compacta */
+.header {
+    height: 80px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%; /* Reduzindo o padding para ganhar mais espaço */
+    background: #fff;
+   
+    box-shadow: var(--box-shadow);
+}
+
+.logoimagem {
+    width: 80px; /* Reduzindo o tamanho da logo */
+}
+
+/* Barra de pesquisa compacta */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 0.2rem 0.5rem;
+    background-color: #f9f9f9;
+    width: 500px; /* Definindo uma largura fixa mais compacta */
+   
+}
+
+.search-input {
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: 'Montserrat';
+    
+}
+
+.search-button {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    cursor: pointer;
+    
+}
+
+.search-button:hover {
+    color: #00BFA6;
+}
+
+/* Ajuste do menu de navegação */
+.cabecalho {
+    display: flex;
+    gap: 1rem; /* Reduzindo o espaçamento entre os links */
+}
+
+.cabecalho a {
+    font-size: 1.5rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem 1rem; /* Reduzindo padding para caber melhor */
+    color: var(--light-color);
+}
+
+.cabecalho a:hover {
+    color: #fff;
+    background: linear-gradient(120deg, #A0E7E5 40%, #00BFA6);
+}
+
+/*Pesquisar*/
+
+/*Inico da formatação do input e da lista de pesquisa*/
+.search-bar {
+    
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*Fim da formatação do input e da lista de pesquisa*/
+/* Inicio da personalização do nome do paciente */
+#paciente-nome{
+    position: relative;
+    margin-top: 90px;
+    /* padding: 20px 40px;
+    border: 10px solid transparent; */
+    border-image: linear-gradient(45deg, #ffafbd, #ffc3a0, #ffafbd) 1;
+    border-radius: 20px;
+    font-size: 24px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: fadeIn 2s ease-in-out;
+}
+/* Fim da personalizção do nome do paciente */
+/* Caixa de Imagem com Descrição */
+.image-description-box {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 100;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    margin-top: 100px; /* Aumente a margem para garantir que não sobreponha o header */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-box {
+    flex: 1;
+    max-width: 40%; /* Controla a largura da imagem */
+}
+
+.image-box .image {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.description-box {
+    flex: 2;
+    max-width: 55%; /* Controla a largura da descrição */
+    padding-left: 2rem;
+}
+
+.description-box h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.description-box p {
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+
+/*Localização*/
+
+
+.loc-box {
+    margin-top: 50px;
+    width: 100%;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.loc-box iframe {
+    border-radius: 8px;
+}
+#iframe-container {
+    width: 100%;
+    height: 400px; /* Ajuste para a altura desejada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iframe-container iframe {
+    width: 100%; /* Ocupar toda a largura do container */
+    height: 100%; /* Ocupar toda a altura do container */
+    border: 0; /* Remover bordas padrão */
+    border-radius: 8px; /* Combinar com o estilo do container */
+}
+
+/*Localização*/
+
+.Text-informa {
+    display: grid;
+    place-items: center; /* Centraliza horizontal e verticalmente */
+    height: 100%; /* Certifique-se de definir a altura do contêiner */
+    text-align: center; /* Centraliza o texto dentro do próprio elemento */
+    margin-top: 100px;
+}
+
+
+
+.Text-informa h2{
+    padding-top: 5%;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #000; /* Define o texto como preto */
+    
+}
+
+.Text-informa p{
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 15px 0;
+    color: #000; /* Define o texto como preto */
+}
+
+
+/* Estilização do Rodapé */
+.rodape {
+    height: 100px;
+    align-items: center;
+    position: fixed;
+    bottom: -100px; /* Esconde o rodapé inicialmente */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    transition: bottom 0.3s ease;
+}
+
+.rodape.mostrar {
+    bottom: 0; /* Mostra o rodapé */
+}
+
+.rodape .cabecalho a {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+.rodape .cabecalho a:hover {
+    color: #fff;
+    background: linear-gradient(120deg, #A0E7E5 40%, #00BFA6);
+}
+
+body {
+    padding-bottom: 100px; /* Altura do rodapé */
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="contato.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="image/logo.png" class="logoimagem" alt="Logo">
+    </a>
+
+    <!-- Pesquisa -->
+    <div class="search-bar">
+        <input type="text" id="pesquisa" placeholder="Pesquisar medicamentos..." class="search-input">
+        <div id="sugestoes" class="sugestoes"></div>
+        <button class="search-button">🔍</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="cabecalho">
+        <a href="index.html">Home</a>
+        <a href="medicina.html">Medicamentos</a>
+        <a href="contato.html">Contatos</a>
+    </nav>
+</header>
+
+
+<!-- Caixa da empresa -->
+<div class="empresa-box">
+    <img src="image/logo.png" alt="Logo da empresa" class="empresa-logo">
+    <div class="empresa-info">
+        <h2>Remédio Fácil</h2>
+        <p> A Remédio Fácil é uma empresa criada por Ysaac, João Lucas e Gustavo, com o objetivo de facilitar o acesso a produtos de saúde, especialmente medicamentos, por meio de uma plataforma de busca inovadora. A ferramenta permite uma pesquisa simplificada e personalizada com base no perfil de saúde do usuário, oferecendo informações claras sobre contraindicações e instruções de uso, além de localizar estoques em tempo real nos pontos de venda. Nossa missão é tornar o cuidado com a saúde mais prático, acessível e seguro para todos.  
+        </p>
+    </div>
+</div>
+
+<div class="empresa-info">
+    <h3>Nosso time</h3>
+    <div class="equipe">
+        <!-- Membro 1 -->
+        <div class="membro">
+            <img src="image/gust.jfif" alt="Fundador 1">
+            <h4>Ysaac Rezende</h4>
+            <p>Fundador e CEO</p>
+            <div class="icones">
+                <a href="mailto:ysaacqueiroz@gmail.com" class="icone gmail" title="Gmail"></a>
+                <a href="https://www.linkedin.com/in/ysaac-rezende-queiroz-bb3a7022a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icone linkedin" title="LinkedIn"></a>
+            </div>
+        </div>
+        <!-- Membro 2 -->
+        <div class="membro">
+            <img src="image/chrollo.jfif" alt="Fundador 2">
+            <h4>João Lucas Rocha</h4>
+            <p>Co-Fundador e CTO</p>
+            <div class="icones">
+                <a href="mailto:joaoribeirosantana6@gmail.com" class="icone gmail" title="Gmail"></a>
+                <a href="https://linkedin.com/in/joao-lucas-rocha" target="_blank" class="icone linkedin" title="LinkedIn"></a>
+            </div>
+        </div>
+        <!-- Membro 3 -->
+        <div class="membro">
+            <img src="image/musashi.jfif" alt="Fundador 3">
+            <h4>Gustavor</h4>
+            <p>Co-Fundador e COO</p>
+            <div class="icones">
+                <a href="mailto:gubianchi2004@gmail.com" class="icone gmail" title="Gmail"></a>
+                <a href="https://www.linkedin.com/in/gustavo-mariano-53555a264/" target="_blank" class="icone linkedin" title="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--rodapé-->
+<footer class="rodape">
+    <div class="cabecalho">
+        <a href="https://www.instagram.com/remediofacilempresa/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/remedio-facil-5239a433a/" target="_blank">LinkedIn</a>
+    </div>
+</footer>
+
+<!-- Rodapé -->
+
+<!-- Rodapé -->
+
+
+ <script>
+    // Função para mostrar o rodapé quando o usuário rolar para o final da página
+    window.addEventListener("scroll", function () {
+        const rodape = document.querySelector(".rodape");
+        const scrollPosition = window.scrollY; // Posição do scroll na página
+        const windowHeight = window.innerHeight; // Altura da janela
+        const documentHeight = document.documentElement.scrollHeight; // Altura total do documento
+
+        // Mostrar rodapé se o usuário estiver próximo ao final da página
+        if (scrollPosition + windowHeight >= documentHeight - 100) {
+            rodape.classList.add("mostrar");
+        } else {
+            rodape.classList.remove("mostrar");
+        }
+    });
+</script>
+
+
+<script src="teste.js"></script>
+
+</body>
+</html>

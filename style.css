@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --black: black;
+    --purple: purple;
+    --light-color:#666;
+  
+
+   /*A unidade rem (root em) é uma unidade de medida relativa usada principalmente em CSS,
+    para definir tamanhos de fontes e outros elementos na web. 
+    Ela se baseia no tamanho da fonte do elemento raiz da página, que geralmente é o elemento <html> */
+}
+
+.logoimagem{
+    width: 100px ;
+    right: 100px ;
+    
+}
+
+*{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+body{
+    background: #fff;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding-bottom: 100px; /* Altura do rodapé */
+}
+
+/*header*/
+
+.header{
+    height: 100px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+   
+
+
+}
+
+.header .logoimagem img{
+    width: 100px ;
+    right: 100px ;
+    margin-top: 10px;
+    height: 95%;
+    width: 65%;
+    display: inline-block;
+}
+
+.header .cabecalho a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+}
+
+.header .cabecalho a:hover{
+    color: #fff;
+    background: linear-gradient(120deg, #A0E7E5 40%, #00BFA6);
+
+}
+/*header*/
+
+/*main*/
+
+.main{
+    width: 100%;
+    display: flex;
+}
+
+.main .left{
+    padding-left: 45px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.main .left h2{
+    padding-top: 15%;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #000; /* Define o texto como preto */
+    margin-top: 5px;
+}
+
+.main .left h1{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 15px 0;
+    color: #000; /* Define o texto como preto */
+}
+
+.main .right img{
+    padding-top: 40%;
+    font-size: 10px;
+    width: 130%;
+    height: 113%;
+    display: flex;
+   
+}
+
+.main .left button{
+    padding-top: 12px;
+    padding: 15px 45px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+    border: 1px solid;
+    box-shadow: none;
+    background-image: linear-gradient(120deg, #007C8B 40%, #00BFA6);
+
+    border-radius: 10px;
+}
+
+/*main*/
+
+/*Pesquisar*/
+
+/* Ajuste no cabeçalho para incluir a barra de pesquisa compacta */
+.header {
+    height: 80px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%; /* Reduzindo o padding para ganhar mais espaço */
+    background: #fff;
+    z-index: 10000;
+    box-shadow: var(--box-shadow);
+}
+
+.logoimagem {
+    width: 80px; /* Reduzindo o tamanho da logo */
+}
+
+/* Barra de pesquisa compacta */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 0.2rem 0.5rem;
+    background-color: #f9f9f9;
+    width: 500px; /* Definindo uma largura fixa mais compacta */
+    z-index: 10000;
+}
+
+.search-input {
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: 'Montserrat';
+    z-index: 10000;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    cursor: pointer;
+    
+}
+
+.search-button:hover {
+    color: #00BFA6;
+}
+
+/* Ajuste do menu de navegação */
+.cabecalho {
+    display: flex;
+    gap: 1rem; /* Reduzindo o espaçamento entre os links */
+}
+
+.cabecalho a {
+    font-size: 1.5rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem 1rem; /* Reduzindo padding para caber melhor */
+    color: var(--light-color);
+}
+
+.cabecalho a:hover {
+    color: #fff;
+    background: linear-gradient(120deg, #A0E7E5 40%, #00BFA6);
+}
+/* Container principal */
+.upload-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Box informativa */
+.upload-info {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    transform: translateX(-50%);
+    background: linear-gradient(120deg, #A0E7E5 40%, #00BFA6);
+    color: black;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 16px; /* Ajuste do tamanho da fonte */
+    font-family: Arial, sans-serif; /* Fonte padrão ou personalizada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: normal; /* Permite que o texto quebre linhas */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    width: 300px; /* Largura fixa */
+    height: 200px; /* Altura fixa */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto */
+    justify-content: center; /* Centraliza horizontalmente o texto */
+    text-align: center; /* Centraliza o texto */
+}
+/* Botão de fechar */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #ff6666;
+}
+
+.upload-info::after {
+    content: '';
+    position: absolute;
+    top: -4%; /* Posiciona a seta abaixo da box */
+    left: 68%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #120d0d transparent; /* Triângulo com a cor do fundo */
+}
+
+.upload-info.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Estilização do botão */
+.upload-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: #ffa500;
+}
+
+.upload-icon {
+    width: 20px;
+    height: 20px;
+}
+/*Pesquisar*/
+
+/*Inico da formatação do input e da lista de pesquisa*/
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-results {
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    max-width: 495px;
+    margin-left: 228px;
+    background: #f9f9f9;
+    position: absolute;
+    top: 47px; 
+    left: 0;
+    right: 0;
+    z-index: 10000;
+   
+}
+
+.search-results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.search-results li {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.list-item {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.list-item:hover {
+    background-color: #cce7ff;
+}
+/*Fim da formatação do input e da lista de pesquisa*/
+
+/* Estilo para o link */
+.imagemanimada {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para a imagem */
+.imagemanimada .animada {
+    margin-top: 60px;
+    margin-left: 60px;
+    width: 900px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilização do Rodapé */
+.rodape {
+    height: 100px;
+    align-items: center;
+    position: fixed;
+    bottom: -100px; /* Esconde o rodapé inicialmente */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    transition: bottom 0.3s ease;
+}
+
+.rodape.mostrar {
+    bottom: 0; /* Mostra o rodapé */
+}
+
+.rodape .cabecalho a {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+.rodape .cabecalho a:hover {
+    color: #fff;
+    background: linear-gradient(120deg, #A0E7E5 40%, #00BFA6);
+}
+/* Inicio da formatação do botão do formulario */
+.btn-formulario {
+    cursor: pointer;
+    background-color: #4caf50; /* Cor inicial */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    position: relative; /* Para posicionar estrelas */
+    overflow: hidden; /* Evitar que as estrelas saiam do botão */
+}
+
+/* Hover para mudar cor e aumentar tamanho */
+.btn-formulario:hover {
+    background-color: #90ee90; /* Verde claro */
+    transform: scale(1.1); /* Aumentar tamanho */
+    box-shadow: 0 0 15px #90ee90; /* Efeito de brilho */
+}
+
+/* Estilo para as estrelas */
+.btn-formulario::before, .btn-formulario::after {
+    content: '✨';
+    position: absolute;
+    font-size: 16px;
+    color: #ffffe0; /* Amarelo claro */
+    animation: moveStars 1s infinite ease-in-out;
+    opacity: 0;
+}
+
+/* Posicionamento das estrelas */
+.btn-formulario::before {
+    top: -10px;
+    left: 10%;
+}
+.btn-formulario::after {
+    bottom: -10px;
+    right: 10%;
+}
+
+/* Hover para as estrelas aparecerem */
+.btn-formulario:hover::before, .btn-formulario:hover::after {
+    opacity: 1;
+}
+
+/* Animação das estrelas */
+@keyframes moveStars {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-10px) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.5;
+    }
+}
+/* Fim da formatação do botão do formulário */
