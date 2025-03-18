@@ -51,7 +51,7 @@ A plataforma oferece:
 
 Para ver a demonstração do front-end, assista ao vídeo no link abaixo:
 
-[Vídeo de apresentação](#https://drive.google.com/file/d/1LeGr5fndB-PguluZtSWyAK7keS4b_Wgd/view?usp=sharing) 
+[Vídeo de apresentação](https://drive.google.com/file/d/1LeGr5fndB-PguluZtSWyAK7keS4b_Wgd/view?usp=sharing) 
 
 ## 👥 Equipe de Desenvolvimento
 
